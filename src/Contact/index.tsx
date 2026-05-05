@@ -16,7 +16,7 @@ import styles from "./index.module.scss";
       <section className={styles.contactSection}>
         <div className={styles.container}>
           
-          {/* LEFT INFO */}
+         
           <div className={styles.info}>
             <h2>Contact Info</h2>
             <p>Reach out to us for premium paints, color consultation, and more.</p>
@@ -37,7 +37,6 @@ import styles from "./index.module.scss";
             </div>
           </div>
 
-          {/* FORM */}
           <div className={styles.formCard}>
             <h2>Send Message</h2>
 
