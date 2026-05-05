@@ -176,73 +176,128 @@
 }
 
 @media (max-width: 1024px) {
-  .feature {
-    flex-direction: column;
-    text-align: center;
-    padding: 80px 6%;
+  .wrapper {
+    .moods {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
 
-    .left p {
-      margin: 0 auto 25px;
+    .feature {
+      flex-direction: column;
+      text-align: center;
+      padding: 80px 6%;
+
+      .left {
+        p {
+          margin: 0 auto 25px;
+        }
+      }
     }
   }
 }
-
-/* ===== MOBILE ===== */
 @media (max-width: 768px) {
-  .feature {
-    gap: 40px;
+  .wrapper {
+    .moods {
+      padding: 60px 5%;
 
-    .left h2 {
-      font-size: 28px;
+      h2 {
+        font-size: 26px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
     }
 
-    .right .bucket {
-      width: 180px;
-      height: 180px;
+    .feature {
+      gap: 40px;
+
+      .left {
+        padding: 30px;
+
+        h2 {
+          font-size: 28px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
     }
-  }
-}
-@media (max-width: 480px) {
-  .feature {
-    padding: 60px 20px;
 
-    .left h2 {
-      font-size: 24px;
+    .cta {
+      padding: 50px 15px;
+
+      h2 {
+        font-size: 22px;
+      }
+
+      button {
+        padding: 15px 25px;
+        font-size: 16px;
+      }
     }
-
-    .left p {
-      font-size: 14px;
-    }
-  }
-}
-
-@media (max-width: 1024px) {
-  .moods .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .feature {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero .content h1 {
-    font-size: 36px;
-  }
-
-  .moods .grid {
-    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 480px) {
-  .hero {
-    height: 70vh;
-  }
+  .wrapper {
+    .moods {
+      padding: 50px 15px;
 
-  .hero .content h1 {
-    font-size: 28px;
+      h2 {
+        font-size: 22px;
+      }
+
+      .card {
+        padding: 20px;
+
+        h3 {
+          font-size: 16px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .color {
+        height: 80px;
+      }
+    }
+
+    .feature {
+      padding: 60px 15px;
+
+      .left {
+        padding: 25px;
+
+        h2 {
+          font-size: 24px;
+        }
+
+        p {
+          font-size: 13px;
+        }
+
+        ul li {
+          font-size: 13px;
+          padding: 8px 10px;
+        }
+      }
+    }
+
+    .cta {
+      h2 {
+        font-size: 20px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 12px 20px;
+      }
+    }
   }
 }

@@ -128,6 +128,23 @@
   }
 }
 
+
+@media (max-width: 1200px) {
+  .quotePage {
+    padding: 70px 30px;
+
+    .content {
+      h1 {
+        font-size: 56px;
+      }
+    }
+
+    .quoteBox {
+      gap: 20px;
+    }
+  }
+}
+
 @media (max-width: 950px) {
   .quotePage {
     padding: 60px 20px;
@@ -135,6 +152,10 @@
     .content {
       h1 {
         font-size: 48px;
+      }
+
+      p {
+        font-size: 16px;
       }
     }
 
@@ -145,6 +166,100 @@
     .bottomText {
       h2 {
         font-size: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .quotePage {
+    .content {
+      .tag {
+        font-size: 12px;
+        padding: 8px 18px;
+      }
+
+      h1 {
+        font-size: 40px;
+      }
+    }
+
+    .quoteBox {
+      .quoteCard {
+        padding: 25px;
+
+        h3 {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 14px;
+        }
+      }
+    }
+
+    .bottomText {
+      h2 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .quotePage {
+    padding: 50px 15px;
+
+    .content {
+      h1 {
+        font-size: 32px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    .bottomText {
+      h2 {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .quotePage {
+    padding: 40px 10px;
+
+    .content {
+      h1 {
+        font-size: 26px;
+      }
+
+      .tag {
+        font-size: 11px;
+        padding: 6px 14px;
+      }
+    }
+
+    .quoteBox {
+      .quoteCard {
+        padding: 20px;
+      }
+    }
+
+    .bottomText {
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 13px;
       }
     }
   }

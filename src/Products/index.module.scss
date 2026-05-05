@@ -107,3 +107,61 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 900px) {
+  .container {
+    padding: 50px 5%;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .heading h1 {
+    font-size: 24px;
+  }
+
+  .imageBox {
+    height: 140px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 40px 4%;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .heading {
+    margin-bottom: 30px;
+
+    h1 {
+      font-size: 20px;
+    }
+
+    span {
+      font-size: 10px;
+    }
+  }
+
+  .imageBox {
+    height: 120px;
+  }
+
+  .content {
+    padding: 12px;
+
+    h2 {
+      font-size: 14px;
+    }
+  }
+
+  .button {
+    padding: 10px 12px;
+    font-size: 11px;
+  }
+}

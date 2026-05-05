@@ -90,3 +90,94 @@
   background: #222;
   color: white;
 }
+
+@media (max-width: 900px) {
+  .hero {
+    height: auto;
+    padding: 80px 20px;
+
+    h1 {
+      font-size: 2.4rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  .categories {
+    padding: 50px 30px;
+  }
+
+  .featured {
+    padding: 50px 30px;
+  }
+
+  .about {
+    padding: 50px 30px;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    padding: 70px 15px;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+
+  .cta {
+    padding: 10px 22px;
+    font-size: 0.9rem;
+  }
+
+  .categories {
+    padding: 40px 20px;
+    gap: 15px;
+  }
+
+  .card {
+    padding: 16px;
+  }
+
+  .featured {
+    padding: 40px 20px;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .colorBox {
+    width: 65px;
+    height: 65px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+  }
+
+  .cta {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .colorBox {
+    width: 55px;
+    height: 55px;
+  }
+}

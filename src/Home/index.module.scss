@@ -21,8 +21,6 @@
     object-fit: cover;
     filter: brightness(0.85) contrast(1.05);
   }
-
-  /* Gradient Overlay */
   &::after {
     content: "";
     position: absolute;
@@ -37,7 +35,6 @@
   }
 }
 
-/* ACTIVE SLIDE */
 .active {
   opacity: 1;
   transform: scale(1);
@@ -83,7 +80,6 @@
   }
 }
 
-/* DOT INDICATORS */
 .dots {
   position: absolute;
   bottom: 25px;
@@ -105,22 +101,6 @@
       width: 25px;
       border-radius: 20px;
       background: linear-gradient(135deg, #ff7a18, #00c6ff);
-    }
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .content {
-    left: 5%;
-    max-width: 90%;
-
-    h1 {
-      font-size: 2.2rem;
-    }
-
-    p {
-      font-size: 0.95rem;
     }
   }
 }
@@ -148,7 +128,6 @@
     }
   }
 }
-
 @media (max-width: 900px) {
   .slider {
     height: 80vh;
@@ -178,6 +157,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    max-width: 95%;
 
     h1 {
       font-size: 1.8rem;

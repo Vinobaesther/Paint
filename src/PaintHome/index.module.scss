@@ -162,17 +162,110 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .hero {
+    padding: 60px 5%;
+
+    .left h1 {
+      font-size: 2.5rem;
+    }
+
+    .right img {
+      width: 450px;
+    }
+  }
+}
+
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
     text-align: center;
 
+    .left {
+      .points {
+        justify-content: center;
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
     .right {
       margin-top: 30px;
     }
+  }
 
-    .buttons {
-      justify-content: center;
+  .services {
+    padding: 60px 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 40px 20px;
+
+    .left {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .points {
+        font-size: 16px;
+      }
+
+      .buttons {
+        flex-direction: column;
+        gap: 10px;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .right {
+      img {
+        width: 100%;
+      }
+
+      .rating {
+        bottom: -10px;
+        font-size: 14px;
+      }
+    }
+  }
+
+  .services {
+    padding: 40px 15px;
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    .cards {
+      gap: 15px;
+
+      .card {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    .left h1 {
+      font-size: 1.6rem;
+    }
+  }
+
+  .services {
+    h2 {
+      font-size: 1.5rem;
     }
   }
 }

@@ -54,3 +54,77 @@
   }
 }
 
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 50px 6%;
+  }
+
+  .title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .grid {
+    gap: 25px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+}
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 40px 5%;
+  }
+
+  .title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .content {
+    padding: 16px;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 13px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    padding: 30px 4%;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+
+  .card img {
+    height: 160px;
+  }
+
+  .content {
+    padding: 14px;
+
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
