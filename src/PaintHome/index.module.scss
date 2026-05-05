@@ -3,11 +3,13 @@
   background: #f9fbfa;
 }
 
+/* HERO */
 .hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 80px 8%;
+  gap: 40px;
 
   .left {
     flex: 1;
@@ -34,57 +36,53 @@
       grid-template-columns: repeat(2, auto);
       gap: 10px;
       margin: 20px 0;
-      color: gray;
       font-size: 18px;
+      color: #666;
     }
 
     .buttons {
       display: flex;
       gap: 15px;
-      justify-content: center;
 
       button {
         padding: 12px 25px;
         border-radius: 30px;
         border: none;
-        // font-weight: 600;
         cursor: pointer;
-        text-align: center;
+        transition: 0.3s ease;
       }
 
       .primary {
         background: #096c6c;
         color: #fff;
-        font-weight: bold;
-        font-size: 18px;
+        font-size: 16px;
+        font-weight: 600;
 
         &:hover {
-          background: white;
+          background: #fff;
           color: #096c6c;
-          font-weight: bold;
-          font-size: 18px;
+          border: 1px solid #096c6c;
         }
       }
-
-
     }
   }
 
   .right {
     flex: 1;
-    position: relative;
     display: flex;
     justify-content: center;
+    position: relative;
 
     img {
-      width: 550px;
+      width: 100%;
+      max-width: 500px;
       border-radius: 20px;
     }
 
     .rating {
       position: absolute;
-      bottom: -20px;
-      background: white;
+      bottom: -15px;
+      background: #fff;
       padding: 10px 15px;
       border-radius: 20px;
       font-weight: 600;
@@ -98,9 +96,10 @@
   }
 }
 
+/* SERVICES */
 .services {
   text-align: center;
-  padding: 80px;
+  padding: 80px 8%;
   background: url("./card.png");
 
   .subtitle {
@@ -124,15 +123,15 @@
     flex-wrap: wrap;
 
     .card {
-      background: #fff;
+      width: 240px;
       padding: 25px;
-      width: 220px;
+      background: #fff;
       border-radius: 15px;
       text-align: left;
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-      transition: 0.3s;
       border-top: 5px solid #096c6c;
       border-right: 5px solid #096c6c;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+      transition: 0.3s;
 
       &:hover {
         transform: translateY(-8px);
@@ -144,46 +143,26 @@
       }
 
       p {
-        color: #666;
         font-size: 14px;
-        font-weight: bold;
-      }
-    }
-
-    .active {
-      background: white;
-      color: white;
-
-      h3,
-      p {
-        color: white;
+        color: #666;
+        line-height: 1.5;
       }
     }
   }
 }
-
-@media (max-width: 1024px) {
-  .hero {
-    padding: 60px 5%;
-
-    .left h1 {
-      font-size: 2.4rem;
-    }
-
-    .right img {
-      width: 450px;
-    }
-  }
-}
-
 @media (max-width: 900px) {
   .hero {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
 
     .left {
+      align-items: center;
+
       .points {
         grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
       }
 
       .buttons {
@@ -192,18 +171,15 @@
     }
 
     .right {
-      margin-top: 30px;
+      margin-top: 20px;
     }
-  }
-
-  .services {
-    padding: 60px 20px;
   }
 }
 
+/* Mobile (≤ 600px) */
 @media (max-width: 600px) {
   .hero {
-    padding: 40px 20px;
+    padding: 50px 20px;
 
     .left {
       h1 {
@@ -211,14 +187,17 @@
       }
 
       .points {
-        font-size: 16px;
+        font-size: 15px;
+        text-align: center;
       }
 
       .buttons {
         flex-direction: column;
+        align-items: center;
 
         button {
           width: 100%;
+          max-width: 280px;
         }
       }
     }
@@ -226,6 +205,7 @@
     .right {
       img {
         width: 100%;
+        max-width: 320px;
       }
 
       .rating {
@@ -236,29 +216,80 @@
   }
 
   .services {
-    padding: 40px 15px;
+    padding: 50px 20px;
 
     h2 {
       font-size: 1.8rem;
     }
 
     .cards {
-      gap: 15px;
+      justify-content: center;
+    }
 
-      .card {
-        width: 100%;
-        max-width: 300px;
-      }
+    .card {
+      width: 100%;
+      max-width: 320px;
     }
   }
 }
 
 @media (max-width: 400px) {
-  .hero .left h1 {
-    font-size: 1.6rem;
+  .hero {
+    .left {
+      h1 {
+        font-size: 1.6rem;
+      }
+
+      .points {
+        font-size: 14px;
+      }
+    }
   }
 
-  .services h2 {
-    font-size: 1.5rem;
+  .services {
+    h2 {
+      font-size: 1.5rem;
+    }
+  }
+}
+@media (max-width: 320px) {
+  .hero {
+    padding: 30px 12px;
+
+    .left {
+      width: 100%;
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .points {
+        font-size: 12px;
+        padding: 0;
+        margin: 15px auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;  
+        padding-left: 20px;      
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 4px;
+          width: 100%;
+        }
+      }
+
+      .buttons {
+        width: 100%;
+
+        button {
+          font-size: 13px;
+          padding: 10px;
+          width: 100%;
+        }
+      }
+    }
   }
 }
