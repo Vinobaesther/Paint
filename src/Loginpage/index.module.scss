@@ -1,0 +1,39 @@
+.container{
+    min-height:80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url("./login.png")
+}
+
+.loginbox{
+    width:350px;
+    background: white;
+    padding:40px;
+    border-radius: 20px;
+    text-align: center;
+    border:6px solid #096c6c;
+
+    h2{
+        margin-bottom: 10px;
+        color:#222;
+    }
+
+p{
+    color:gray;
+    margin-bottom: 25px;
+    font-size:18px;
+}
+input{
+    width:100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+span{
+   display: block;
+   margin-top: 20px;
+   color:black;
+   font-size: 17px;
+}
+}

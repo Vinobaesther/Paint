@@ -1,0 +1,151 @@
+
+
+.quotePage {
+//   width: 100%;
+//   min-height: 80vh;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+
+  .glowOne,
+  .glowTwo {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 1;
+  }
+
+  .glowOne {
+    width: 350px;
+    height: 350px;
+    background: rgba(255, 136, 0, 0.25);
+    top: -100px;
+    left: -100px;
+  }
+
+  .glowTwo {
+    width: 400px;
+    height: 400px;
+    background: rgba(0, 170, 255, 0.2);
+    bottom: -120px;
+    right: -120px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .content {
+    text-align: center;
+    color: #096c6c;
+
+    .tag {
+      display: inline-block;
+      padding: 10px 24px;
+      border-radius: 30px;
+      background: #096c6c;
+      color: #ffffff;
+      font-size: 14px;
+      letter-spacing: 1px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 68px;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 25px;
+    //   background: linear-gradient(90deg, #096c6c, #ff8c42);
+    
+    }
+
+    p {
+      max-width: 760px;
+      margin: 0 auto;
+      font-size: 18px;
+      line-height: 1.9;
+      color:gray;
+      font-weight: bold;
+    }
+  }
+
+  .quoteBox {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    .quoteCard {
+      background: #ffffff;
+      padding: 35px;
+      border-radius: 28px;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f1f1f1;
+      transition: all 0.4s ease;
+
+      h3 {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #096c6c;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.8;
+        color: #777777;
+      }
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+      }
+    }
+  }
+
+  .bottomText {
+    margin-top: 70px;
+    text-align: center;
+
+    h2 {
+      font-size: 40px;
+      margin-bottom: 18px;
+      color: #096c6c;
+    }
+
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #666666;
+      line-height: 1.8;
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .quotePage {
+    padding: 60px 20px;
+
+    .content {
+      h1 {
+        font-size: 48px;
+      }
+    }
+
+    .quoteBox {
+      grid-template-columns: 1fr;
+    }
+
+    .bottomText {
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}

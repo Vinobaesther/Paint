@@ -1,0 +1,218 @@
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  padding: 60px 8%;
+  background: linear-gradient(135deg, #f8f9fb, #eef2f7);
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 50px;
+
+  h1 {
+    font-size: 42px;
+    font-weight: 700;
+    // background: linear-gradient(90deg, #ff7a18, #00cec9);
+   
+  }
+
+  p {
+    margin-top: 10px;
+    color: #555;
+    font-size: 16px;
+    font-weight: bold;
+  }
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: 0.3s ease;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    padding: 20px;
+  }
+}
+
+.colorPreview {
+  height: 6px;
+  width: 100%;
+}
+
+.content {
+  padding: 20px;
+
+  h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  button {
+    margin-top: 10px;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background:#096c6c;
+    color: white;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}
+
+/* TAG */
+.tag {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: #000;
+  color: #fff;
+}
+
+@media (min-width: 1400px) {
+  .wrapper {
+    padding: 80px 12%;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .grid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 900px) {
+  .wrapper {
+    padding: 50px 6%;
+  }
+
+  .hero {
+    margin-bottom: 40px;
+
+    h1 {
+      font-size: 30px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .card img {
+    height: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 40px 5%;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .hero p {
+    font-size: 13px;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .card {
+    border-radius: 16px;
+  }
+
+  .card img {
+    height: 150px;
+    padding: 15px;
+  }
+
+  .content {
+    padding: 15px;
+
+    h3 {
+      font-size: 16px;
+    }
+
+    button {
+      font-size: 14px;
+      padding: 8px 14px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .wrapper {
+    padding: 30px 4%;
+  }
+
+  .hero h1 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 12px;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .content h3 {
+    font-size: 14px;
+  }
+
+  .tag {
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero h1 {
+    font-size: 18px;
+  }
+
+  .hero p {
+    font-size: 11px;
+  }
+
+  .content button {
+    font-size: 12px;
+    padding: 7px 12px;
+  }
+}

@@ -1,0 +1,248 @@
+.wrapper {
+  font-family: "Poppins", sans-serif;
+  background: #f8fafc;
+}
+
+.moods {
+  padding: 80px 8%;
+  text-align: center;
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 50px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+
+  .card {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+
+    &:hover {
+      transform: translateY(-10px);
+    }
+
+    h3 {
+      margin-top: 15px;
+    }
+
+    p {
+      font-size: 14px;
+      color: gray;
+      font-weight: bold;
+    }
+  }
+
+  .color {
+    height: 100px;
+    border-radius: 15px;
+  }
+
+  .green {
+    background: linear-gradient(135deg, #bbf7d0, #4ade80);
+  }
+
+  .blue {
+    background: linear-gradient(135deg, #bae6fd, #38bdf8);
+  }
+
+  .pink {
+    background: linear-gradient(135deg, #fbcfe8, #f472b6);
+  }
+
+  .dark {
+    background: linear-gradient(135deg, #1e293b, #0f172a);
+  }
+}
+.feature {
+  padding: 80px 6%;
+  background: linear-gradient(135deg, #f8fafc, #eef2f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .left {
+    max-width: 650px;
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.12);
+    }
+
+    h2 {
+      font-size: 32px;
+      font-weight: 600;
+      color: #1e293b;
+      margin-bottom: 15px;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: linear-gradient(to right, #00b4b4,#096c6c);
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        border-radius: 10px;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #475569;
+      line-height: 1.7;
+      margin: 20px 0 25px;
+      font-weight: bold;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        font-size: 15px;
+        color: #096c6c;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        border-radius: 10px;
+        background: #f1f5f9;
+        transition: all 0.25s ease;
+
+        &:hover {
+          background: #e0f2fe;
+          transform: translateX(6px);
+        }
+      }
+    }
+  }
+}
+.cta {
+  background:linear-gradient(135deg, #096c6c, #00b4b4);
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  button {
+    padding: 20px;
+    border: none;
+    background: white;
+    color:#096c6c;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight:bold;
+    font-size:18px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes shine {
+  0% {
+    left: -60%;
+  }
+  100% {
+    left: 120%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .feature {
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 6%;
+
+    .left p {
+      margin: 0 auto 25px;
+    }
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .feature {
+    gap: 40px;
+
+    .left h2 {
+      font-size: 28px;
+    }
+
+    .right .bucket {
+      width: 180px;
+      height: 180px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .feature {
+    padding: 60px 20px;
+
+    .left h2 {
+      font-size: 24px;
+    }
+
+    .left p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .moods .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .feature {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero .content h1 {
+    font-size: 36px;
+  }
+
+  .moods .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero .content h1 {
+    font-size: 28px;
+  }
+}
