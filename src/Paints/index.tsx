@@ -12,7 +12,7 @@ const images = [
   "./brown.png",
   "./orange.png",
   "./red.png",
-  "./ green.png",
+  "./l-green.png",
   "./purple.png",
 
 ];
