@@ -5,49 +5,64 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
+  const scrollToSection = (id:string)=>{
+    const section=document.getElementById(id);
+
+    if(section){
+      section.scrollIntoView({
+        behavior:"smooth",
+      });
+    }
+setMenuOpen(false);
+  };
   const navigate=useNavigate();
 
-  const one=()=>{
-    navigate("/PaintHome")
-  }
+//   const one=()=>{
+//     navigate("/PaintHome")
+//   }
 
-  const two=()=>{
-    navigate("/Products")
-  }
+//   const two=()=>{
+//     navigate("/Products")
+//   }
 
-  const three=()=>{
-    navigate("/Paints")
-  }
+//   const three=()=>{
+//     navigate("/Paints")
+//   }
 
-const four=()=>{
-  navigate("/Newarrivals")
-}
+// const four=()=>{
+//   navigate("/Newarrivals")
+// }
 
-const five=()=>{
-  navigate("/Contact")
-}
+// const five=()=>{
+//   navigate("/Contact")
+// }
 
 
   return (
     <header className={styles.header}>
       <nav className={styles.navbar}>
         
-        <div className={styles.logo}>
+        <div 
+        className={styles.logo}
+        onClick={()=>scrollToSection("home")}
+        >
         
           <img src="./logo.png" alt=""/>
             Paint Company
           </div>
 
         <ul className={`${styles.navlinks} ${menuOpen ? styles.active : ""}`}>
-          <li onClick={one}>Home</li>
-          <li onClick={two}>Products</li>
-          <li onClick={three}>Colors</li>
-          <li onClick={four}>New Arrivals</li>
-          <li onClick={five}>Contact</li>
+          <li onClick={()=>scrollToSection("home")}>Home</li>
+          <li onClick={()=>scrollToSection("products")}>Products</li>
+          <li onClick={()=>scrollToSection("colors")}>Colors</li>
+          <li onClick={()=>scrollToSection("newarrivals")}>New Arrivals</li>
+          <li onClick={()=>scrollToSection("contact")}>Contact</li>
         </ul>
 
         <div className={styles.right}>
-          <button className={styles.login} onClick={()=>navigate("/Loginpage")}>Login</button>
+          <button 
+          className={styles.login}
+          onClick={()=>navigate("/Loginpage")}>Login</button>
 
           <div
             className={`${styles.hamburger} ${menuOpen ? styles.open : ""}`}

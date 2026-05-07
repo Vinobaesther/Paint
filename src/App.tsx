@@ -23,14 +23,35 @@ function App() {
                 <Route path="/" element={
 
                     <>
+                    <div id="home">
                         <PaintHome />
+                        </div>
+
+                        <div id="about">
                         <Home />
+                        </div>
+
+                        <div id="hero">
                         <Hero />
+                        </div>
+
+                        <div id="colors">
                         <Paints />
+                        </div>
+
+                        <div id="products">
                         <Products />
+                        </div>
+
+                        <div id="newarrivals">
                         <Newarrivals />
+                        </div>
                         {/* <Shop/> */}
+
+                        <div id="contact">
                         <Contact />
+                        </div>
+
                         <Footer />
                     </>
                 } />
@@ -40,11 +61,11 @@ function App() {
                 <Route path="getstarted" element={<Getstarted/>}/>
                 <Route path="viewproduct" element={<Viewproduct/>}/>
 
-                <Route path="painthome" element={<PaintHome />} />
+                {/* <Route path="painthome" element={<PaintHome />} />
                 <Route path="products" element={<Products />} />
                 <Route path="paints" element={<Paints />} />
                 <Route path="newarrivals" element={<Newarrivals />} />
-                <Route path="contact" element={<Contact />} />
+                <Route path="contact" element={<Contact />} /> */}
 
             </Routes>
         </BrowserRouter>
